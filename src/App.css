@@ -5,6 +5,7 @@
 :root {
   --primary-color: #282c34;
   --primary-text-color: white;
+  --accent-color: #61dafb;
 }
 
 .App-header {
@@ -28,12 +29,16 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
 .App-link.active {
   color: rgb(65, 232, 182);
+}
+
+.App-accent-color {
+  color: var(--accent-color);
 }
 
 .App-list {
@@ -50,14 +55,18 @@
   padding: 0 1rem;
 }
 
-
 .App-main {
  min-height: 50vh;
 }
 
 .App-footer {
   background-color: var(--primary-color);
-  min-height: 5vh;
+  min-height: 7vh;
   color: var(--primary-text-color);
   text-align: center;
+}
+
+.App-footer-note {
+  padding: 1rem 0;
+  font-size: .8rem;
 }

@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          Hi, this is my 'advent of code' challenge
+          Hi, these are my solutions of <span className='App-accent-color'>'Advent of Code' challenges*</span>
         </h1>
         <h2>
           You can find each challenge below:
@@ -47,7 +47,8 @@ function App() {
     </main>
 
     <footer className='App-footer'>
-     Coded by <a className='App-link' href='https://www.linkedin.com/in/hanavoriskova/?locale=en_US' target='_blank' rel='noreferrer'>Hana Voriskova</a> for coding practice | 2023
+     <div>Coded by <a className='App-link' href='https://www.linkedin.com/in/hanavoriskova/?locale=en_US' target='_blank' rel='noreferrer'>Hana Voriskova</a> for coding practice | <a className='App-link' href='https://github.com/havoriskova/advent-challenge' target='_blank' rel='noreferrer'>Github repo</a> 2023</div>
+     <div className='App-footer-note'>*this page contains only my solutions of 'Advent of Code' puzzles. The puzzles are on page <a className='App-link' href='https://adventofcode.com/' target='_blank' rel='noreferrer'>Advent of Code</a>, and I do not own any rights for the puzzles.</div>
     </footer>
     </BrowserRouter>
   );
