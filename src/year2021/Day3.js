@@ -12,32 +12,49 @@ function Day3() {
   
     function day3Part1() {
         let gammaRateArr = []; //the most common in column
-        let gamma0 = 0;
-        let gamma1 = 0;
+        let zero = 0;
+        let one = 0;
 
         let epsilonRateArr = []; //the least common in column
 
-        for (let i = 0; i < diagnosticReportArr.length; i++) {
-            if (diagnosticReportArrNum[i][0] === 0) {
-                gamma0++;
-            } else if (diagnosticReportArrNum[i][0] === 1) {
-                gamma1++;
+        //find out the largest number, so I know what is the maximum of column for the loop
+        const largestNum = Math.max(...diagnosticReportArrNum);
+        console.log(largestNum);
+
+
+        //loop within a loop to create arrays with results for each column for binary number
+        for (let col = 0; col < 20; col++) {
+            for (let i = 0; i < diagnosticReportArr.length; i++) {
+                if (diagnosticReportArr[i][col] === '0') {
+                    zero++;
+                    // console.log(diagnosticReportArr[i][col]);
+                } else if (diagnosticReportArr[i][col] === '1') {
+                    one++;
+                    // console.log(diagnosticReportArr[i][col]);
+                } else {
+                    console.log('err')
+                }
             }
+    
+            if (zero < one) {
+                gammaRateArr.push(1);
+            } else {
+                gammaRateArr.push(0);
+            }
+
+            console.log(gammaRateArr);
         }
-
-        if (gamma0 < gamma1) {
-            gammaRateArr.push(1);
-        } else {
-            gammaRateArr.push(0);
-        }
+        
+        
 
 
-
+        // convert binary number from array into number, and convert that into decimal number
         let gammaBinary = gammaRateArr.join('');
         let gammaDecimal = 0;
         let epsilonBinary = epsilonRateArr.join('');
         let epsilonDecimal = 0;
 
+        // result is multiplying decimal numbers of gamma and epsilon
         let powerConsumption = gammaDecimal * epsilonDecimal;
         let result1 = powerConsumption;
   
