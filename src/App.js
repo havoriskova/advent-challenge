@@ -16,8 +16,8 @@ function App() {
         </h2>
         <ul className='App-list'>
           {/* <li><NavLink to='/home' onClick={this.removeActiveNav}><img className='nav-li' alt='home' src={homeNav}/></NavLink></li> */}
-          <li className='App-list-item'><NavLink to='/day1'>day 1</NavLink></li>
-          <li className='App-list-item'><NavLink to='/day2'>day 2</NavLink></li>
+          <li className='App-list-item'><NavLink to='/day1' className='App-link'>day 1</NavLink></li>
+          <li className='App-list-item'><NavLink to='/day2' className='App-link'>day 2</NavLink></li>
         </ul>
       </header>
     </div>
@@ -34,7 +34,7 @@ function App() {
     </main>
 
     <footer className='App-footer'>
-     Coded by Hana Voriskova for coding practice
+     Coded by <a className='App-link' href='https://www.linkedin.com/in/hanavoriskova/?locale=en_US'>Hana Voriskova</a> for coding practice
     </footer>
     </BrowserRouter>
   );
